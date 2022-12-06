@@ -43,14 +43,14 @@ public class AnswerKeyScript : MonoBehaviour   //this script is attached to UI A
         AnswerKey[10] = "A";
         AnswerKey[11] = "C";
         AnswerKey[12] = "C";
-        AnswerKey[13] = "A";
-        AnswerKey[14] = "C";
-        AnswerKey[15] = "A";
-        AnswerKey[16] = "B";
+        AnswerKey[13] = "C";
+        AnswerKey[14] = "B";
+        AnswerKey[15] = "C"; 
+        AnswerKey[16] = "A";
         AnswerKey[17] = "B";
-        AnswerKey[18] = "C";
-        AnswerKey[19] = "C";
-        AnswerKey[20] = "C";
+        AnswerKey[18] = "A";
+        AnswerKey[19] = "B";
+        AnswerKey[20] = "C";  //up to this point is correctly keyes as of Dec 5, 2022
 
         AnswerChoiceFeedback.text = null;
 

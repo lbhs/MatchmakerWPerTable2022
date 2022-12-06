@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 85fa44e7b4c0cfe4ba7dea19cbfa0b7d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ae9fb42e51a262745a35dfa6135ab882, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,9 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IonID: 9
-  LastCationInstantiated: {fileID: 0}
-  LastAnionInstantiated: {fileID: 0}
   DropdownSaltSelector: {fileID: 0}
+  TMPDropdownForSalts: {fileID: 0}
   TextBoxForAnswers: {fileID: 0}
 --- !u!61 &7472520585552585123
 BoxCollider2D:
@@ -163,7 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5d371b26c771e4485d467538c43070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetBondingSite: {x: 0, y: 0}
   X_Offset: 1.8
   BondingPartner: {fileID: 0}
   BondingPartnerParentIon: {fileID: 0}
@@ -174,9 +172,6 @@ MonoBehaviour:
   AnionValence: -1
   ValenceRemaining: 0
   ParentAtom: {fileID: 0}
-  AnionTriggerList:
-  - {fileID: 7946403555609851886}
-  SaltID: 0
   ListOfBondedIonsInThisMolecule: []
   BondingArenaPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &-1462110162031527544

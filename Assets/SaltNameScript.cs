@@ -11,7 +11,13 @@ public class SaltNameScript : MonoBehaviour  //attached to TMPDropdownSaltSelect
     public int SaltNumberToStartThisScene;  //this allows use of the universal list
     public Button AdvanceToNextSaltButton;  //made interactable when a correct answer has been given
     public GameObject AnswerManagementSystem;  //the AnswerManagementSystem GameObject keeps the variable WhichSaltAreWeOn (AnswerKeyScript)
-
+    /*TO ADD A NEW SALT:
+        1. PUT ITS NAME IN THIS PUBLIC LIST 
+        2. ADD THE COMPONENT IONS IN TMPDrowdownSaltSelectorScript
+        3. ADD A TROPHY CASE IMAGE TO THE AnswerKeyScript
+        4. Add Answer Choices to AnswerManagementScript (3 answer choices for each salt)
+        5. Put Correct Choice into AnswerKeyScript
+    */
 
     // Start is called before the first frame update
     void Start()

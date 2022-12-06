@@ -11,6 +11,13 @@ public class SaltIonOptions
     public List<GameObject> IonsInThisSalt = new List<GameObject>();  //sublist of individual ions for each choice from the master list.  Each salt has TWO ions to activate
     //public bool challenge;
     //These GameObjects are now rigidbody PreFab Ions, NOT UI elements!!
+    /*TO ADD A NEW SALT:
+        1. ADD THE COMPONENT IONS IN IN THIS PUBLIC LIST 
+        2. PUT ITS NAME IN SaltNameScript 
+        3. ADD A TROPHY CASE IMAGE TO THE AnswerKeyScript
+        4. Add Answer Choices to AnswerManagementScript (3 answer choices for each salt)
+        5. Put Correct Choice into AnswerKeyScript
+    */
 }
 
 
@@ -70,6 +77,9 @@ public class TMPDrowdownSaltSelectorScript : MonoBehaviour  //This script is att
          19 = ferric sulfate (difficult)
          20 = 
          */
+
+
+
     public void ShowTheFirstSalt()
     {
         AllIonsInScene = new List<GameObject>();   //empty the list once a new salt is chosen

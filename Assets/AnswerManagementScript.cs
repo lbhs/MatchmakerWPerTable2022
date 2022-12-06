@@ -95,37 +95,37 @@ public class AnswerManagementScript : MonoBehaviour
         AnswerChoices[12, 1] = "Sn2(PO4)3";
         AnswerChoices[12, 2] = "Sn3(PO4)2";
 
-        AnswerChoices[13, 0] = "SnPO4";
-        AnswerChoices[13, 1] = "Sn2(PO4)3";
-        AnswerChoices[13, 2] = "Sn3(PO4)2";
+        AnswerChoices[13, 0] = "NaS";
+        AnswerChoices[13, 1] = "NaS2";
+        AnswerChoices[13, 2] = "Na2S";
 
-        AnswerChoices[14, 0] = "CuNO3";
-        AnswerChoices[14, 1] = "Cu(NO)2";
-        AnswerChoices[14, 2] = "Cu(NO3)2";
+        AnswerChoices[14, 0] = "KO";
+        AnswerChoices[14, 1] = "K2O";
+        AnswerChoices[14, 2] = "KO2";
 
-        AnswerChoices[15, 0] = "KBr";
-        AnswerChoices[15, 1] = "KBr2";
-        AnswerChoices[15, 2] = "K2Br2";
+        AnswerChoices[15, 0] = "AlNO3";
+        AnswerChoices[15, 1] = "Al(NO)3";
+        AnswerChoices[15, 2] = "Al(NO3)3";
 
-        AnswerChoices[16, 0] = "NaPO4";
-        AnswerChoices[16, 1] = "Na3PO4";
-        AnswerChoices[16, 2] = "Na3(PO)4";
+        AnswerChoices[16, 0] = "SrSO4";
+        AnswerChoices[16, 1] = "Sr(SO)4";
+        AnswerChoices[16, 2] = "Sr(SO4)4";
 
-        AnswerChoices[17, 0] = "FeCl2";
-        AnswerChoices[17, 1] = "FeCl3";
-        AnswerChoices[17, 2] = "Fe3Cl";
+        AnswerChoices[17, 0] = "MgN2";
+        AnswerChoices[17, 1] = "Mg3N2";
+        AnswerChoices[17, 2] = "Mg2N3";
 
-        AnswerChoices[18, 0] = "CaPO4";
-        AnswerChoices[18, 1] = "Ca(PO4)2";
-        AnswerChoices[18, 2] = "Ca3(PO4)2";
+        AnswerChoices[18, 0] = "LiNO3";
+        AnswerChoices[18, 1] = "Li(NO)3";
+        AnswerChoices[18, 2] = "Li(NO3)3";
 
-        AnswerChoices[19, 0] = "FeSO4";
-        AnswerChoices[19, 1] = "Fe2SO4";
-        AnswerChoices[19, 2] = "Fe2(SO4)3";
+        AnswerChoices[19, 0] = "FeCl";
+        AnswerChoices[19, 1] = "FeCl2";
+        AnswerChoices[19, 2] = "FeCl3";
 
-        AnswerChoices[20, 0] = "Mg3(PO4)";
-        AnswerChoices[20, 1] = "Mg2(PO4)3";
-        AnswerChoices[20, 2] = "Mg3(PO4)2";
+        AnswerChoices[20, 0] = "Co3(PO4)";
+        AnswerChoices[20, 1] = "Co2(PO4)3";
+        AnswerChoices[20, 2] = "Co3(PO4)2";
 
         //for (i = 1; i<16; i++)
         //{
