@@ -404,7 +404,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -155, y: 20}
+  m_AnchoredPosition: {x: -155, y: 50}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &50291497
@@ -2464,14 +2464,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '3-6 Points = Copper Medal
+  m_text: '50-69% = Copper Medal
 
-    7-9 Points = Silver Medal
+    70-82% = Silver Medal
 
-    10-11 Points
-    = Gold Medal
+    83-99% = Gold Medal
 
-    12 Points = Platinum Medal'
+    100%
+    = Platinum Medal'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4242,6 +4242,7 @@ MonoBehaviour:
   ListOfBondedIonsInThisMolecule: []
   netChargeOfMolecule: 0
   SaltID: 0
+  ThisIsThePeriodicTableScene: 0
 --- !u!4 &835278537
 Transform:
   m_ObjectHideFlags: 0
@@ -4850,7 +4851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.000015258789}
   m_SizeDelta: {x: 0, y: 35}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1062431447
@@ -5794,6 +5795,7 @@ MonoBehaviour:
   GoldMedal: {fileID: 227839237}
   PlatinumMedal: {fileID: 687754914}
   Score: 0
+  MaxScore: 0
   MedalExplanationText: {fileID: 327372261}
   FinalScoreDisplay: {fileID: 152325299}
   CelebrationSound: {fileID: 1257673069}

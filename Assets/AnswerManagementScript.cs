@@ -8,8 +8,8 @@ using System;
 //DESKTOP VERSION
 public class AnswerManagementScript : MonoBehaviour
 {
-    public string[,] AnswerChoices = new string[21, 3];  //NEED TO UPDATE THE DIMENSIONS OF THE INDEX ON LINE 148!!!!
-    public string[,] FormattedAnswerChoices = new string[21, 3];
+    public string[,] AnswerChoices = new string[25, 3];  //NEED TO UPDATE THE DIMENSIONS OF THE INDEX ON LINE 148!!!!
+    public string[,] FormattedAnswerChoices = new string[25, 3];
     public GameObject AnswerButtonA;   //This is the actual button GameObject
     public GameObject AnswerButtonB;
     public GameObject AnswerButtonC;
@@ -99,13 +99,13 @@ public class AnswerManagementScript : MonoBehaviour
         AnswerChoices[13, 1] = "NaS2";
         AnswerChoices[13, 2] = "Na2S";
 
-        AnswerChoices[14, 0] = "KO";
-        AnswerChoices[14, 1] = "K2O";
-        AnswerChoices[14, 2] = "KO2";
+        AnswerChoices[14, 0] = "AlNO3";
+        AnswerChoices[14, 1] = "Al(NO)3";
+        AnswerChoices[14, 2] = "Al(NO3)3";
 
-        AnswerChoices[15, 0] = "AlNO3";
-        AnswerChoices[15, 1] = "Al(NO)3";
-        AnswerChoices[15, 2] = "Al(NO3)3";
+        AnswerChoices[15, 0] = "NH2SO4";
+        AnswerChoices[15, 1] = "(NH4)2SO4";
+        AnswerChoices[15, 2] = "NH4(SO4)";
 
         AnswerChoices[16, 0] = "SrSO4";
         AnswerChoices[16, 1] = "Sr(SO)4";
@@ -126,6 +126,22 @@ public class AnswerManagementScript : MonoBehaviour
         AnswerChoices[20, 0] = "Co3(PO4)";
         AnswerChoices[20, 1] = "Co2(PO4)3";
         AnswerChoices[20, 2] = "Co3(PO4)2";
+
+        AnswerChoices[21, 0] = "Cu2O";
+        AnswerChoices[21, 1] = "CuO2";
+        AnswerChoices[21, 2] = "Cu2O2";
+
+        AnswerChoices[22, 0] = "K2CO3";
+        AnswerChoices[22, 1] = "K2(CO)3";
+        AnswerChoices[22, 2] = "K2(CO3)3";
+
+        AnswerChoices[23, 0] = "FeBr2";
+        AnswerChoices[23, 1] = "FeBr3";
+        AnswerChoices[23, 2] = "Fe2Br3";
+
+        AnswerChoices[24, 0] = "AlOH3";
+        AnswerChoices[24, 1] = "Al(OH)2";
+        AnswerChoices[24, 2] = "Al(OH)3";
 
         //for (i = 1; i<16; i++)
         //{
@@ -148,7 +164,7 @@ public class AnswerManagementScript : MonoBehaviour
 
     public void GenerateFormattedAnswerChoices()
     {
-        for (i = 1; i < 21; i++)   //THIS i VALUE MUST GO AS HIGH AS THE NUMBER OF SALTS IN THE SYSTEM!!!!!
+        for (i = 1; i < 25; i++)   //THIS i VALUE MUST GO AS HIGH AS THE NUMBER OF SALTS IN THE SYSTEM!!!!!  ALSO NEED TO SET DIMENSIONS OF ARRAY IN LINES 11 & 12
         {
             for (j = 0; j < 3; j++)
             {

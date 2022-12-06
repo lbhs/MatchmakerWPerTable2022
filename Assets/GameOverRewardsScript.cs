@@ -15,6 +15,8 @@ public class GameOverRewardsScript : MonoBehaviour  //Attached to the AnswerMana
     public GameObject PlatinumMedal;
     private GameObject MedalOnDisplay;
     public int Score;
+    public int MaxScore;
+    private int PercentCorrect;
 
     public GameObject MedalExplanationText;  //Rock = 0-2 pts, Copper = 3-6 pts, Silver = 7-9 pts, Gold = 10-11 pts, Platinum = 12 pts  TMP_Text object displayed to the right of the medals
     public TMP_Text FinalScoreDisplay;
@@ -27,16 +29,20 @@ public class GameOverRewardsScript : MonoBehaviour  //Attached to the AnswerMana
 
     public GameObject BondingSpacePanel;  //will hide this when game is over--use the space to display a medal!
     public GameObject AnswerChoiceA;  //will hide this when game is over
-    public GameObject AnswerChoiceB;
+    public GameObject AnswerChoiceB;  //will hide this when game is over
     public GameObject AnswerChoiceC;
-    public GameObject AnswerChoiceText;
-    public GameObject SaltNameText;
+    public GameObject AnswerChoiceText;  //will hide this when game is over
+    public GameObject SaltNameText;  //will hide this when game is over
+
+    //public GameObject AnswerManagementSystem;  //keeper of the variable NumberOfQuestions in this game  ALREADY THE CURRENT GAMEOBJECT!!!
+
 
     // Start is called before the first frame update
     void Start()
     {
         MedalExplanationText.SetActive(false);
         FinalScoreDisplay.text = null;
+        MaxScore = GetComponent<AnswerKeyScript>().NumberOfQuestionsInThisScene * 2;
     }
 
     // Update is called once per frame
@@ -55,32 +61,33 @@ public class GameOverRewardsScript : MonoBehaviour  //Attached to the AnswerMana
     public void ShowMedalWhenGameOver()  //called from AnswerKeyScript when final correct answer has been provided by user
     {
         AllIonsInScene = GameObject.Find("TMP DropdownForSalts").GetComponent<TMPDrowdownSaltSelectorScript>().AllIonsInScene;
+        PercentCorrect = 100 * Score / MaxScore;
 
         for (i = 0; i < AllIonsInScene.Count; i++)  //this part will delete all the ions in scene--bonded or unbonded!
         {
             Destroy(AllIonsInScene[i]);
         }
 
-        FinalScoreDisplay.text = "You earned " + Score + " Points";
+        FinalScoreDisplay.text = "You earned " + Score + " Points, <br>" + PercentCorrect + " %";
         MedalExplanationText.SetActive(true);
-        print("Your Score = " + Score + " points");
+        //print("Your Score = " + Score + " points");
 
-        if (Score < 3)
+        if (PercentCorrect < 50)
         {
             ClangSound.Play();
         }
-        else if(Score < 7)
+        else if(PercentCorrect < 70)
         {
             
             MedalOnDisplay = CopperMedal;
             ToasterOvenDingSound.Play();
         }
-        else if (Score < 10)
+        else if (PercentCorrect < 83)
         {
             MedalOnDisplay = SilverMedal;
             ToasterOvenDingSound.Play();
         }
-        else if (Score < 12)
+        else if (PercentCorrect < 100)
         {
             MedalOnDisplay = GoldMedal;
             ApplauseSound.Play();

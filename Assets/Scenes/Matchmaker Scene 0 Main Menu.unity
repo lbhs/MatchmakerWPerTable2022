@@ -2888,6 +2888,10 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: '   2 = Ionic Bonding with Polyatomic Ions'
       m_Image: {fileID: 0}
+    - m_Text: '   3 = Ionic Bonding with Mono- and Poly-atomic Ions'
+      m_Image: {fileID: 0}
+    - m_Text: '   4 = Periodic Table Game'
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

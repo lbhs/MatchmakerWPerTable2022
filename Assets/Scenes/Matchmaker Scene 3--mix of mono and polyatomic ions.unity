@@ -2466,14 +2466,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '3-6 Points = Copper Medal
+  m_text: '50-69% = Copper Medal
 
-    7-9 Points = Silver Medal
+    70-82% = Silver Medal
 
-    10-11 Points
-    = Gold Medal
+    83-99% = Gold Medal
 
-    12 Points = Platinum Medal'
+    100%
+    = Platinum Medal'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3218,8 +3218,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -200}
-  m_SizeDelta: {x: 180, y: 75}
+  m_AnchoredPosition: {x: 150, y: -195}
+  m_SizeDelta: {x: 180, y: 84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &628062390
 MonoBehaviour:
@@ -4853,7 +4853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0000076293945}
+  m_AnchoredPosition: {x: 0, y: -0.000011444092}
   m_SizeDelta: {x: 0, y: 35}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1062431447
@@ -5698,6 +5698,10 @@ MonoBehaviour:
   - 
   - 
   - 
+  - 
+  - 
+  - 
+  - 
   AnswerChoiceFeedback: {fileID: 177344710}
   SaltSelectorDropdown: {fileID: 1876354357}
   PointsForThisQuestion: 2
@@ -5719,22 +5723,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9e1eeb54128cab14bbc4b35784124dac, type: 3}
   - {fileID: 21300000, guid: 0754ce3a472e66645855647ec046cafe, type: 3}
   - {fileID: 21300000, guid: 41c6355c1af029a4aac24fc0a526b025, type: 3}
-  - {fileID: 21300000, guid: 86e859e209535cb4d8663dc8bcb78e89, type: 3}
   - {fileID: 21300000, guid: e44f4c6021d642544a2ab954eea155d1, type: 3}
+  - {fileID: 21300000, guid: 82af02f1be9ff5e408d80af1f6b6f0e8, type: 3}
   - {fileID: 21300000, guid: 63dd6b5ec81b97942aa2927b5d06e721, type: 3}
   - {fileID: 21300000, guid: 0df96e4239ab4c74a8dee3167e04cc77, type: 3}
   - {fileID: 21300000, guid: 3b89d7b571bc6b141b0199a41b81877e, type: 3}
   - {fileID: 21300000, guid: 907c07130c7882e4b80576d3a597557a, type: 3}
   - {fileID: 21300000, guid: a81bb2f112b07c646ad03a6aa1a21cd3, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 28a73a94ab85fac49a76c7a551ea971b, type: 3}
+  - {fileID: 21300000, guid: 8c722a537b146454b90ceb754c4874d3, type: 3}
+  - {fileID: 21300000, guid: 85d6355420d77d94f89c8ae01a15eeea, type: 3}
+  - {fileID: 21300000, guid: a48f0233b43bc8044b5f54b1fb667bc3, type: 3}
   NumberOfQuestionsInThisScene: 12
   IDNumberOfFirstSalt: 13
   WhichSaltAreWeOn: 1
@@ -5756,6 +5755,7 @@ MonoBehaviour:
   GoldMedal: {fileID: 227839237}
   PlatinumMedal: {fileID: 687754914}
   Score: 0
+  MaxScore: 0
   MedalExplanationText: {fileID: 327372261}
   FinalScoreDisplay: {fileID: 152325299}
   CelebrationSound: {fileID: 1257673069}
@@ -6202,7 +6202,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 731329721}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.8833333
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -7074,7 +7074,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Scene 2: \nPolyatomic Ions"
+  m_text: "Scene 3: \nPolyatomic and Monatomic Ions"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7143,12 +7143,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1725310668}
-    characterCount: 25
+    characterCount: 39
     spriteCount: 0
-    spaceCount: 4
-    wordCount: 4
+    spaceCount: 6
+    wordCount: 6
     linkCount: 0
-    lineCount: 2
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -8026,11 +8026,11 @@ MonoBehaviour:
     - {fileID: 1944167300137440266, guid: e988ef4b622173b4bb22d29611ff5d21, type: 3}
     - {fileID: 608371778539709866, guid: ed7a6f0ccb90a6c47a7c6b0a9b78ddc0, type: 3}
   - IonsInThisSalt:
-    - {fileID: 1944167300137440266, guid: 3430f7354ae7bef4d9bfe208523154b7, type: 3}
-    - {fileID: 608371778539709866, guid: 2bc2f12553ddfc146abbbac54e41f83f, type: 3}
-  - IonsInThisSalt:
     - {fileID: 4213032851955056546, guid: b511461d448d1094388c15bc20258072, type: 3}
     - {fileID: 4213032851955056546, guid: ee82c0475fb6f7f49b846d0d1cd126ba, type: 3}
+  - IonsInThisSalt:
+    - {fileID: 1944167300137440266, guid: ef520ec7d33dc2747899b2c32f61fa0c, type: 3}
+    - {fileID: 608371778539709866, guid: a3a781ad32efff4429231d950b278358, type: 3}
   - IonsInThisSalt:
     - {fileID: 657514775458421799, guid: 080df6f06ed34e049bf86575e2d14e76, type: 3}
     - {fileID: 608371778539709866, guid: a3a781ad32efff4429231d950b278358, type: 3}
@@ -8047,17 +8047,17 @@ MonoBehaviour:
     - {fileID: 657514775458421799, guid: 0641132881210ae48a5c98fd44623983, type: 3}
     - {fileID: 608371778539709866, guid: 1c80457acc872824187eff65e45c6be6, type: 3}
   - IonsInThisSalt:
-    - {fileID: 657514775458421799, guid: 3a50e2c61fa2ea04bbac3e0c837a4470, type: 3}
-    - {fileID: 4213032851955056546, guid: 71de7d618331cc14b87d48bfd72bc923, type: 3}
+    - {fileID: 1944167300137440266, guid: f380d0d084a34b948b5abbe36f17b54f, type: 3}
+    - {fileID: 608371778539709866, guid: 2bc2f12553ddfc146abbbac54e41f83f, type: 3}
   - IonsInThisSalt:
-    - {fileID: 657514775458421799, guid: 3a50e2c61fa2ea04bbac3e0c837a4470, type: 3}
-    - {fileID: 4213032851955056546, guid: 71de7d618331cc14b87d48bfd72bc923, type: 3}
+    - {fileID: 1944167300137440266, guid: 3430f7354ae7bef4d9bfe208523154b7, type: 3}
+    - {fileID: 608371778539709866, guid: 296ee201cbffe944796c88b6b68f91d7, type: 3}
   - IonsInThisSalt:
-    - {fileID: 657514775458421799, guid: 3a50e2c61fa2ea04bbac3e0c837a4470, type: 3}
-    - {fileID: 4213032851955056546, guid: 71de7d618331cc14b87d48bfd72bc923, type: 3}
+    - {fileID: 4213032851955056546, guid: 76d94f80837fe264c91656d7057c19b0, type: 3}
+    - {fileID: 4213032851955056546, guid: 7d1ee72bc3af7854ea4a780f96cd9f7a, type: 3}
   - IonsInThisSalt:
-    - {fileID: 657514775458421799, guid: 3a50e2c61fa2ea04bbac3e0c837a4470, type: 3}
-    - {fileID: 4213032851955056546, guid: 71de7d618331cc14b87d48bfd72bc923, type: 3}
+    - {fileID: 4213032851955056546, guid: b511461d448d1094388c15bc20258072, type: 3}
+    - {fileID: 4213032851955056546, guid: 6d9bca9275cafa44d90d56817e1f2783, type: 3}
   - IonsInThisSalt:
     - {fileID: 657514775458421799, guid: 3a50e2c61fa2ea04bbac3e0c837a4470, type: 3}
     - {fileID: 4213032851955056546, guid: 71de7d618331cc14b87d48bfd72bc923, type: 3}
@@ -8227,18 +8227,18 @@ MonoBehaviour:
   - Iron(III) Sulfate
   - Tin(II) Phosphate
   - Sodium Sulfide
-  - Potassium Oxide
   - Aluminum Nitrate
+  - Ammonium Sulfate
   - Strontium Sulfate
   - Magnesium Nitride
   - Lithium Nitrate
   - Iron(II) Chloride
   - Cobalt(II) Phosphate
-  - Tin(II) Phosphate
-  - Tin(II) Phosphate
-  - Tin(II) Phosphate
-  - Tin(II) Phosphate
-  - Tin(II) Phosphate
+  - Copper(I) Oxide
+  - Potassium Carbonate
+  - Iron(III) Bromide
+  - Aluminum Hydroxide
+  - 
   SaltNameDisplay: {fileID: 49377866}
   SaltNumberToStartThisScene: 1
   AdvanceToNextSaltButton: {fileID: 24872821}

@@ -30,7 +30,7 @@ public class AnswerKeyScript : MonoBehaviour   //this script is attached to UI A
     void Start()
     {
         WhichSaltAreWeOn = IDNumberOfFirstSalt;
-        //answer choices are shown in AnswerManagementScript  Scene 1 = #1-6,  Scene 2 = #7-12,  Scene 3 = #13-18, Scene 4 = #19-24
+        //answer choices are shown in AnswerManagementScript  Scene 1 = #1-6 (all monatomic ions),  Scene 2 = #7-12 (all with polyatomic),  Scene 3 = #13-24 (mixed monatomic and polyatomic)
         AnswerKey[1] = "A";
         AnswerKey[2] = "B";
         AnswerKey[3] = "B";
@@ -44,13 +44,17 @@ public class AnswerKeyScript : MonoBehaviour   //this script is attached to UI A
         AnswerKey[11] = "C";
         AnswerKey[12] = "C";
         AnswerKey[13] = "C";
-        AnswerKey[14] = "B";
-        AnswerKey[15] = "C"; 
+        AnswerKey[14] = "C";
+        AnswerKey[15] = "B"; 
         AnswerKey[16] = "A";
         AnswerKey[17] = "B";
         AnswerKey[18] = "A";
         AnswerKey[19] = "B";
-        AnswerKey[20] = "C";  //up to this point is correctly keyes as of Dec 5, 2022
+        AnswerKey[20] = "C";  
+        AnswerKey[21] = "A";
+        AnswerKey[22] = "A";
+        AnswerKey[23] = "B";
+        AnswerKey[24] = "C";  //up to this point is correctly keyed as of Dec 6, 2022
 
         AnswerChoiceFeedback.text = null;
 
