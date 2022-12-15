@@ -211,7 +211,9 @@ public class PT_DragIt : MonoBehaviour
                         PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().NumberOfAnions++;
                     }
                     PerTableIonManager.GetComponent<PT_IonManagerScript>().PT_IonsInBondingArena.Add(gameObject);
-                    
+                    //gameObject.tag = "IonDroppedInBondingArena";
+                    gameObject.layer = 11;
+
                     if (MoleculeListKeeper.GetComponent<NetChargeCalculatorScript>().netChargeOfMolecule == 0)  //Molecule Complete!  User may submit answer now.
                     {
                         //print("looking for SubmitAnswerButton");
@@ -232,9 +234,9 @@ public class PT_DragIt : MonoBehaviour
         
     }
 
-    public IEnumerator MoveRigidbodyToTargetSite(Vector2 TargetPosition)
+    public IEnumerator MoveRigidbodyToTargetSite(Vector2 TargetPosition)  //this sends the rigidbody ion back to starting postion
     {
-        print("MpveRigidbodyToTargetSiteCoroutine");
+        print("MoveRigidbodyToTargetSiteCoroutine");
         while(rb.position != TargetPosition)
         {
             print("moving rigidbody");

@@ -4,33 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CompleteMolecule
-  - Hydrogen
-  - Oxygen
-  - Peak
-  - Valley
-  - Carbon
   - ValleyDB
-  - PeakDB
   - Joule
   - UnbondingTrigger
-  - MCToken
-  - UnbondingTriggerDB
-  - H2Molecule
-  - Diatomic
-  - Radical
   - Chlorine
-  - JouleInCorral
-  - MovingGoldenJewel
-  - UnbondingJoule
-  - PEJewel
-  - MovingJewel
   - CO2
   - PositiveIon
   - IonicBondingTrigger
   - AnionBondingTrigger
   - CationBondingTrigger
   - NegativeIon
+  - IonDroppedInBondingArena
   layers:
   - Default
   - TransparentFX
@@ -43,7 +27,7 @@ TagManager:
   - InFront
   - PeriodicTableCation
   - PeriodicTableAnion
-  - 
+  - IonDroppedInBondingArena
   - 
   - 
   - 

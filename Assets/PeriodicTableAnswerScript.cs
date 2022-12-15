@@ -236,6 +236,7 @@ public class PeriodicTableAnswerScript : MonoBehaviour  //Attached to PerTableAn
         ScoreDisplay.GetComponent<PeriodicTableScoreScript>().UpdateScore(PtsForThisQuestion);
         PtsForThisQuestion = 5;
         HintButton.GetComponent<HintButtonScript>().HideHintDisplayPanel();
+        HintButton.GetComponent<HintButtonScript>().HideVisualHint();
     }
 
     public void WrongAnswerResponse()

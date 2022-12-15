@@ -11,36 +11,49 @@ public class QuestionRandomizerScript : MonoBehaviour  //attached to PerTableQue
     private int RandomQuestionNumber;
     private bool RejectThisNumber;
     private int i;
+    public bool RandomizerActive;
 
     // Start is called before the first frame update
     void Start()  //Set up the RandomQuestionList
     {
-        //choose a random number between 0 and the NumberOfQuestionsInBank
-        //Put this random question number into the RandomQuestionList
-        //Choose another random number, check it against all the numbers already in the RandomQuestionList
-        //if it is an unused number, put it in the List
-        for(i = 0; i < NumberOfQuestionPerGame; i++)
+        if (RandomizerActive)
         {
-            RejectThisNumber = false;
-            RandomQuestionNumber = Random.Range(0, NumberOfQuestionsInBank - 1);
-            //print(RandomQuestionNumber);
-            foreach (int J in RandomQuestionList)
+            //choose a random number between 0 and the NumberOfQuestionsInBank
+            //Put this random question number into the RandomQuestionList
+            //Choose another random number, check it against all the numbers already in the RandomQuestionList
+            //if it is an unused number, put it in the List
+            for (i = 0; i < NumberOfQuestionPerGame; i++)
             {
-                if (J == RandomQuestionNumber)
+                RejectThisNumber = false;
+                RandomQuestionNumber = Random.Range(0, NumberOfQuestionsInBank - 1);
+                //print(RandomQuestionNumber);
+                foreach (int J in RandomQuestionList)
                 {
-                    RejectThisNumber = true;
+                    if (J == RandomQuestionNumber)
+                    {
+                        RejectThisNumber = true;
+                    }
+                }
+
+                if (!RejectThisNumber)
+                {
+                    RandomQuestionList.Add(RandomQuestionNumber);
+                }
+                else
+                {
+                    i--;
                 }
             }
+        }
 
-            if (!RejectThisNumber)
+        else
+        {
+            for (i = 0; i < NumberOfQuestionPerGame; i++)
             {
-                RandomQuestionList.Add(RandomQuestionNumber);
-            }
-            else
-            {
-                i--;
+                RandomQuestionList.Add(i);  //as i increments, each question number gets added to the list in order
             }
         }
+
         //So now the list is set up, and the PeriodicTableQuestionScript needs to read from the list
         GetComponent<PeriodicTableQuestionScript>().ShowTheFirstQuestion();
     }
