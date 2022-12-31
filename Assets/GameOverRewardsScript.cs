@@ -6,6 +6,7 @@ using TMPro;
 
 public class GameOverRewardsScript : MonoBehaviour  //Attached to the AnswerManagementSystem GameObject
 {
+    //PERIODIC TABLE SCENE USES "GAMEOVERSCRIPT" INSTEAD OF GAMEOVERREWARDSSCRIPT!!!!!!
     private List<GameObject> AllIonsInScene;
     private int i;
 
@@ -87,7 +88,7 @@ public class GameOverRewardsScript : MonoBehaviour  //Attached to the AnswerMana
             MedalOnDisplay = SilverMedal;
             ToasterOvenDingSound.Play();
         }
-        else if (PercentCorrect < 100)
+        else if (PercentCorrect < 97)
         {
             MedalOnDisplay = GoldMedal;
             ApplauseSound.Play();

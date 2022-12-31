@@ -11,6 +11,7 @@ public class SaltNameScript : MonoBehaviour  //attached to TMPDropdownSaltSelect
     public int SaltNumberToStartThisScene;  //this allows use of the universal list
     public Button AdvanceToNextSaltButton;  //made interactable when a correct answer has been given
     public GameObject AnswerManagementSystem;  //the AnswerManagementSystem GameObject keeps the variable WhichSaltAreWeOn (AnswerKeyScript)
+    public bool UsingDropdownToChooseSalt;
     /*TO ADD A NEW SALT:
         1. PUT ITS NAME IN THIS PUBLIC LIST 
         2. ADD THE COMPONENT IONS IN TMPDrowdownSaltSelectorScript
@@ -25,7 +26,15 @@ public class SaltNameScript : MonoBehaviour  //attached to TMPDropdownSaltSelect
         //SaltNumberToStartThisScene is kept in AnswerManagementSystem variable IDNumberOfFirstSalt
         SaltNameDisplay.text = "Salt Name: <br>" + SaltNames[AnswerManagementSystem.GetComponent<AnswerKeyScript>().IDNumberOfFirstSalt];
         AdvanceToNextSaltButton.interactable = false;
-        GetComponent<TMPDrowdownSaltSelectorScript>().ShowTheFirstSalt();
+        if (UsingDropdownToChooseSalt)
+        {
+            //do nothing--The Dropdown is only used in Scene 4, which has the list of all 24 salts, other scenes use the AdvanceToNextSalt button
+        }
+        else
+        {
+            GetComponent<TMPDrowdownSaltSelectorScript>().ShowTheFirstSalt();
+        }
+        
     }
 
 

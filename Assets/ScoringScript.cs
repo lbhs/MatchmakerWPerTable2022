@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ScoringScript : MonoBehaviour  //Attached to??
+public class ScoringScript : MonoBehaviour  //Attached to ScoreDisplay
 {
     public TMP_Text ScoreDisplay;
     public static int QuestionsAttempted;

@@ -82,10 +82,11 @@ public class NetChargeCalculatorScript : MonoBehaviour
                 GameObject.Find("AnswerManagementSystem").GetComponent<AnswerManagementScript>().DisplayAnswerChoices(SaltID);  //displays the three multiple choice answers for this salt
             }
 
-            if (!GameObject.Find("PerTableQuestionManager"))  //Periodic Table scene doesn't use this 2-point system
-            {
-                ScoringScript.QuestionsAttempted++;  //each question has 2 possible points 
-            }
+            //MOVED THIS FUNCTION TO THE ANSWERKEYSCRIPT 
+            //if (!GameObject.Find("PerTableQuestionManager"))  //Periodic Table scene doesn't use this 2-point system
+            //{
+            //    ScoringScript.QuestionsAttempted++;  //each question has 2 possible points 
+            //}
                     
 
             DraggingDisabled = true;

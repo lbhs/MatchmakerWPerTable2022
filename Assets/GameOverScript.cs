@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class GameOverScript : MonoBehaviour  //attached to PerTableQuestionManager
+public class GameOverScript : MonoBehaviour  //attached to PerTableQuestionManager 
 {
+    //USED IN PERIODIC TABLE SCENE ONLY!!!!
     public GameObject PerTableScoreDisplay;  //keeper of the score variable
     public GameObject CopperMedal;  //this is a UI Image centered on the screen
     public GameObject SilverMedal;
@@ -97,5 +98,5 @@ public class GameOverScript : MonoBehaviour  //attached to PerTableQuestionManag
         HintButton.SetActive(false);
 
 
-}
+    }   
 }

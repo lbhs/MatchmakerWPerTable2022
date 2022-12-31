@@ -41,6 +41,7 @@ public class TMPDrowdownSaltSelectorScript : MonoBehaviour  //This script is att
     public GameObject LastCationInstantiated;
     public GameObject LastAnionInstantiated;
     private Vector2 CationBoxCenterPoint = new Vector2(-5f, 4.2f);
+    public TMP_Text SaltNameDisplay;
 
 
     //[SerializeField]
@@ -180,18 +181,24 @@ public class TMPDrowdownSaltSelectorScript : MonoBehaviour  //This script is att
 
         else
         {
+            for (i = 0; i < AllIonsInScene.Count; i++)  //this part will delete all the ions in scene--bonded or unbonded!
+            {
+                //print("ion[" + i + "] = " + AllIonsInScene[i]);
+                Destroy(AllIonsInScene[i]);
+                //The ListOfBondedIonsInThisMolecule will be cleared when the user chooses a new salt from the TMP Dropdown Menu (TMPDrowdownSaltSelectorScript line 75)
+            }
+
             AllIonsInScene = new List<GameObject>();   //empty the list once a new salt is chosen
             SaltID = TMPSaltSelector.value;  //this identifies the salt selected for Answer Choice processing
             ChosenCation = ListOfSalts[TMPSaltSelector.value].IonsInThisSalt[0];    //index 0 is always the cation
             print("chosen cation =" + ChosenCation);
             ChosenAnion = ListOfSalts[TMPSaltSelector.value].IonsInThisSalt[1];  //index 1 is the anion
             print("chosen anion =" + ChosenAnion);
-            NetChargeCalculatorScript.DraggingDisabled = false;
-            
+            NetChargeCalculatorScript.DraggingDisabled = false;            
+
 
             GameObject.Find("MoleculeListKeeper").GetComponent<NetChargeCalculatorScript>().ListOfBondedIonsInThisMolecule = new List<GameObject>(); //starting a new molecule, so forget the old
-                        
-
+            
             foreach (var item in AnswerChoiceButtons)   //Reset the Answer Choice Buttons so that they are hidden and green
             {
                 item.GetComponent<Image>().color = new Color32(48, 169, 06, 255);
@@ -202,11 +209,10 @@ public class TMPDrowdownSaltSelectorScript : MonoBehaviour  //This script is att
             AllIonsInScene.Add(Instantiate(ChosenCation, new Vector3(-5f, 4.2f, 0), Quaternion.identity));  //these coordinates are the center of the Cation Display box 
             AllIonsInScene.Add(Instantiate(ChosenAnion, new Vector3(5f, 4.2f, 0), Quaternion.identity));
 
-
             TMPSaltSelector.interactable = false;  //can't change the selected salt until this question is over
 
             AnswerChoiceFeedback.text = null;   //erases the "CORRECT" text in this text box
-            
+            SaltNameDisplay.text = "Salt Name: <br>" + GetComponent<SaltNameScript>().SaltNames[TMPSaltSelector.value];
 
         }
 

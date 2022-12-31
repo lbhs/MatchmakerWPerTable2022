@@ -21,6 +21,6 @@ public class TrivalentIonScript : MonoBehaviour
     public void FillABondingSite()
     {
         BondingSitesRemaining--;
-        print(BondingSitesRemaining + " sites left open");
+        //print(BondingSitesRemaining + " sites left open");
     }
 }

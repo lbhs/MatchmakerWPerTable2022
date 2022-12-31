@@ -23,6 +23,6 @@ public class PerTableChooseVersionScript : MonoBehaviour
     public void ChoosePerTableScene()
     {
         print(VersionSelect.value);
-        SceneManager.LoadScene(VersionSelect.value +2);   //Scene(3) = defined sequence of 10 questions;  Scene(4) = random selection of 10 questions
+        SceneManager.LoadScene(VersionSelect.value);   //Scene(1) = defined sequence of 10 questions;  Scene(2) = random selection of 10 questions
     }
 }

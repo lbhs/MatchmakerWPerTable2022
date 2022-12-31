@@ -163,7 +163,19 @@ public class PeriodicTableAnswerScript : MonoBehaviour  //Attached to PerTableAn
             }
         }
 
-        if (QuestionNumber == 8)  //Make a salt with a monovalent anion
+        if (QuestionNumber == 8)  //Make a salt that contains an Alkaline Earth Metal ion
+        {
+            if (PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().CationCharge == +2)
+            {
+                CorrectAnswerResponse();
+            }
+            else
+            {
+                WrongAnswerResponse();
+            }
+        }
+
+        if (QuestionNumber == 9)  //Make a salt that contains an ion from the Halogen Family
         {
             if (PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().AnionCharge == -1)
             {
@@ -174,19 +186,7 @@ public class PeriodicTableAnswerScript : MonoBehaviour  //Attached to PerTableAn
                 WrongAnswerResponse();
             }
         }
-
-        if (QuestionNumber == 9)  //Make a salt with the formula X3Z1
-        {
-            if (PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().NumberOfCations == 3 && PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().NumberOfAnions == 1)
-            {
-                CorrectAnswerResponse();
-            }
-            else
-            {
-                WrongAnswerResponse();
-            }
-        }
-
+        
         if (QuestionNumber == 10)  //Make the salt sodium nitride
         {
             if (PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().CationID == 1 && PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().AnionID == 15)
@@ -211,9 +211,34 @@ public class PeriodicTableAnswerScript : MonoBehaviour  //Attached to PerTableAn
             }
         }
 
-        if (QuestionNumber == 12)  //Not done yet
+        if (QuestionNumber == 12)  //Make a salt that contains an Alkali Metal ion
         {
-            if (PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().NumberOfCations == 1 && PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().NumberOfAnions == 3)
+            if (PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().CationCharge == +1)
+            {
+                CorrectAnswerResponse();
+            }
+            else
+            {
+                WrongAnswerResponse();
+            }
+        }
+
+       
+        if (QuestionNumber == 13)  //Make a salt with a monovalent anion
+        {
+            if (PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().AnionCharge == -1)
+            {
+                CorrectAnswerResponse();
+            }
+            else
+            {
+                WrongAnswerResponse();
+            }
+        }
+
+        if (QuestionNumber == 14)  //Make a salt with the formula X3Z1
+        {
+            if (PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().NumberOfCations == 3 && PerTableIonManager.GetComponent<InfoAboutIonsInTheArena>().NumberOfAnions == 1)
             {
                 CorrectAnswerResponse();
             }
@@ -227,7 +252,7 @@ public class PeriodicTableAnswerScript : MonoBehaviour  //Attached to PerTableAn
 
     public void CorrectAnswerResponse()
     {        
-        AnswerFeedbackTextbox.text = "Correct!";
+        AnswerFeedbackTextbox.text = "Correct! (" + PtsForThisQuestion + " pts)";
         AnswerFeedbackTextbox.color = Color.green;
         CorrectAnswerSound.Play();
         AdvanceToNextQuestionButton.SetActive(true);    //interactable = true;

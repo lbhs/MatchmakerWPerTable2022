@@ -45,7 +45,7 @@ public class AnswerManagementScript : MonoBehaviour
          */ 
       
         //Going to try using ONE Master List for all the salts used in the 3 scenes.  Will need to manually assign the index value for each scene
-        //Scene 1 uses AnswerChoices 1-6,   Scene 2 uses AnswerChoices 7-12,  Scene 3 uses AnswerChoices 13-18
+        //Scene 1 uses AnswerChoices 1-6,   Scene 2 uses AnswerChoices 7-12,  Scene 3 uses AnswerChoices 13-24, Scene 4 uses 1-24, but with Dropdown!  
 
         AnswerChoices[1, 0] = "NaCl";   //Salt with Index #1 is sodium chloride.  Provide Three choices for the Buttons to Display
         AnswerChoices[1, 1] = "Na2Cl";

@@ -21,4 +21,9 @@ public class LoadPeriodicTableGame : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+
+    public void LoadVideoIntro()
+    {
+        SceneManager.LoadScene(1);
+    }
 }

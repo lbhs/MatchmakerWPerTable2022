@@ -47,6 +47,7 @@ public class PT_IonManagerScript : MonoBehaviour  //Attached to the PeriodicTabl
         //There is duplication below, but the two Lists are slightly different--MoleculeList only tracks BONDED ions, while PerTableIonManager collects unbonded ions as well
         PT_IonsInBondingArena.Clear();  //clear this list and the one kept by MoleculeListKeeper. . .
         MoleculeListKeeper.GetComponent<NetChargeCalculatorScript>().ListOfBondedIonsInThisMolecule.Clear();
+        MoleculeListKeeper.GetComponent<NetChargeCalculatorScript>().netChargeOfMolecule = 0;
         SubmitAnswerButton.interactable = false;
 
         //Set all the variables back to their original states

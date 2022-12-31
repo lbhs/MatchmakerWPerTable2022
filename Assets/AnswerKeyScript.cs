@@ -30,7 +30,7 @@ public class AnswerKeyScript : MonoBehaviour   //this script is attached to UI A
     void Start()
     {
         WhichSaltAreWeOn = IDNumberOfFirstSalt;
-        //answer choices are shown in AnswerManagementScript  Scene 1 = #1-6 (all monatomic ions),  Scene 2 = #7-12 (all with polyatomic),  Scene 3 = #13-24 (mixed monatomic and polyatomic)
+        //answer choices are shown in AnswerManagementScript  Scene 1 = #1-6 (all monatomic ions),  Scene 2 = #7-12 (all with polyatomic),  Scene 3 = #13-24 (mixed monatomic and polyatomic) Scene 4 = #1-24
         AnswerKey[1] = "A";
         AnswerKey[2] = "B";
         AnswerKey[3] = "B";
@@ -85,6 +85,10 @@ public class AnswerKeyScript : MonoBehaviour   //this script is attached to UI A
 
             SaltSelectorDropdown.interactable = true;          
             ScoringScript.PointsEarned += PointsForThisQuestion;
+            if (!GameObject.Find("PerTableQuestionManager"))  //Periodic Table scene doesn't use this 2-point system
+            {
+                ScoringScript.QuestionsAttempted++;  //each question has 2 possible points 
+            }
             PointsForThisQuestion = 2;   //reset point value for the next question 
 
             DisableAnswerChoices();  //no spamming the correct answer choice!

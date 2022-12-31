@@ -16,7 +16,7 @@ public class QuestionRandomizerScript : MonoBehaviour  //attached to PerTableQue
     // Start is called before the first frame update
     void Start()  //Set up the RandomQuestionList
     {
-        if (RandomizerActive)
+        if (RandomizerActive)  //USED IN PERIODIC TABLE GAMES ONLY--MATCHMAKER GAMES USE THE SALTRANDOMIZERSCRIPT
         {
             //choose a random number between 0 and the NumberOfQuestionsInBank
             //Put this random question number into the RandomQuestionList
