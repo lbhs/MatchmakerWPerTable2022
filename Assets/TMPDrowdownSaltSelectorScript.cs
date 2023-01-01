@@ -84,7 +84,7 @@ public class TMPDrowdownSaltSelectorScript : MonoBehaviour  //This script is att
     public void ShowTheFirstSalt()
     {
         AllIonsInScene = new List<GameObject>();   //empty the list once a new salt is chosen
-        print("Starting salt number = " + AnswerManagementSystem.GetComponent<AnswerKeyScript>().WhichSaltAreWeOn);
+        print("Starting salt number = " + AnswerManagementSystem.GetComponent<AnswerKeyScript>().WhichSaltAreWeOn);  //AnswerKeyScript determines first salt to show
         SaltID = AnswerManagementSystem.GetComponent<AnswerKeyScript>().IDNumberOfFirstSalt;  //this identifies the salt selected (for determining Answer Choices for this salt)
         ChosenCation = ListOfSalts[SaltID].IonsInThisSalt[0];    //index 0 is always the cation
         print("chosen cation =" + ChosenCation);

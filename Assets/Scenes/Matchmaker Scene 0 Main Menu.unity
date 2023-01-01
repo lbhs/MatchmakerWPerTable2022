@@ -2862,7 +2862,9 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: '   3 = Ionic Bonding with Mono- and Poly-atomic Ions (12 new q)'
       m_Image: {fileID: 0}
-    - m_Text: '   4 = Choice of 24 Salts'
+    - m_Text: '   4 = Random Set of 10 Salts'
+      m_Image: {fileID: 0}
+    - m_Text: '   5 = Choice of 24 Salts'
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

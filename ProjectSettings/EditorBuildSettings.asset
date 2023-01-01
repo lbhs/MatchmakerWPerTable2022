@@ -18,8 +18,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Matchmaker Scene 3--mix of mono and polyatomic ions.unity
     guid: c4cfe01c21b732e4998360b1d91b3443
   - enabled: 1
-    path: Assets/Scenes/Matchmaker Scene 4--All 24 Salts.unity
-    guid: 3f717cddf93b7cb44b2ed21308d1c771
+    path: Assets/Scenes/Matchmaker Scene 4--10 Random Salts.unity
+    guid: 1db8304bb84d6044b83096d8bb0c79c8
+  - enabled: 1
+    path: Assets/Scenes/Matchmaker Scene 5--All 24 Salts.unity
+    guid: ad1fc582e58f10c42b32e3afe1d20551
   - enabled: 0
     path: Assets/Scenes/MatchMaker Scene 4--Periodic Table.unity
     guid: ae886f5ffe848164ebd0d6598a1ed3f2

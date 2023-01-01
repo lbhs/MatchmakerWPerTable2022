@@ -24,6 +24,7 @@ public class AnswerKeyScript : MonoBehaviour   //this script is attached to UI A
     public int IDNumberOfFirstSalt;
     public int WhichSaltAreWeOn;
     public Button AdvanceToNextSaltButton;
+    
 
 
     // Start is called before the first frame update
@@ -103,39 +104,48 @@ public class AnswerKeyScript : MonoBehaviour   //this script is attached to UI A
             
 
             //DEACTIVATED AUG 31, 2022--DELETION OF IONS IS NOW DONE IN THE ShowTheNextSalt function, part of TMPDrowdownSaltSelectorScript
-            ////The following code deletes all the "old" ions used to make the salt--once correct answer is chosen, need to clean the slate!
-            //AllIonsInScene = GameObject.Find("TMP DropdownForSalts").GetComponent<TMPDrowdownSaltSelectorScript>().AllIonsInScene;
-
-            //for (i = 0; i < AllIonsInScene.Count; i++)  //this part will delete all the ions in scene--bonded or unbonded!
-            //{
-            //    //print("ion[" + i + "] = " + AllIonsInScene[i]);
-            //    Destroy(AllIonsInScene[i]);  
-            //    //The ListOfBondedIonsInThisMolecule will be cleared when the user chooses a new salt from the TMP Dropdown Menu (TMPDrowdownSaltSelectorScript line 75)
-            //}
+           
 
             //DEACTIVATED AUGUST 31, 2022--NOW USING "ADVANCE TO NEXT SALT" BUTTON
-            //GameObject.Find("TMP DropdownForSalts").GetComponent<TMP_Dropdown>().value = 0;  //this resets the dropdown menu to say "Choose a Salt"   
-
-            // Instantiate(TrophyCaseImage, TrophyCaseSlot1, Quaternion.identity);  THIS IS DONE IN THE SlotController Script
-            // Instantiate(TrophyCaseImages[GameObject.Find("TMP DropdownForSalts").GetComponent<TMPDrowdownSaltSelectorScript>().SaltID], TrophyCaseSlot2, Quaternion.identity);
+            
 
             GameObject.Find("TrophyCase").GetComponent<SlotController>().PlaceImageInSlot(TrophyCaseImages[GameObject.Find("TMP DropdownForSalts").GetComponent<TMPDrowdownSaltSelectorScript>().SaltID]);
             AdvanceToNextSaltButton.interactable = true;
 
-            //Keep track of which salt the user is on
-            WhichSaltAreWeOn++;  //this variable is used in the SaltNameScript that is attached to the TMPDropdownSaltSelector GameObject
-            if(WhichSaltAreWeOn == NumberOfQuestionsInThisScene+IDNumberOfFirstSalt)  //This means Game Over!  Start at #1, after 6 correct answers, WhichSaltAreWeOn will become #7
-            {                
-                AdvanceToNextSaltButton.interactable = false;
-                GetComponent<GameOverRewardsScript>().StartGameOverProcess(ScoringScript.PointsEarned);  //send score to GameOver Script that will display medal and play song
-            }
-            
+            //Keep track of which salt the user is on.  WhichSaltAreWeOn acts as the SaltID
+            //If RandomizedListOfSalts is in effect, use ScoringScript to count the number of salts identified, otherwise, use WhichSaltAreWeOn
 
+            if (GetComponent<SaltRandomizerScript>())
+            {
+                //print("salt randomizer in effect");                
+                if(ScoringScript.QuestionsAttempted == NumberOfQuestionsInThisScene)
+                {
+                    AdvanceToNextSaltButton.interactable = false;
+                    GetComponent<GameOverRewardsScript>().StartGameOverProcess(ScoringScript.PointsEarned);  //send score to GameOver Script that will display medal a
+                }
+                else
+                {
+                    WhichSaltAreWeOn = GetComponent<SaltRandomizerScript>().ListOfRandomizedSalts[ScoringScript.QuestionsAttempted];  //this value increments each time a new salt has been built and a correct answer is clicked
+                }
+            }
+
+            else
+            {
+                WhichSaltAreWeOn++;  //this variable is used in the SaltNameScript that is attached to the TMPDropdownSaltSelector GameObject
+                
+                if (WhichSaltAreWeOn == NumberOfQuestionsInThisScene + IDNumberOfFirstSalt)  //This means Game Over!  Start at #1, after 6 correct answers, WhichSaltAreWeOn will become #7
+                {
+                    AdvanceToNextSaltButton.interactable = false;
+                    GetComponent<GameOverRewardsScript>().StartGameOverProcess(ScoringScript.PointsEarned);  //send score to GameOver Script that will display medal and play song
+                }
+            }
+
+            //print("Next salt = " + WhichSaltAreWeOn);
         }
 
         else
         {
-            //print("wrong!");
+            //print("wrong Answer!");
             AnswerChoiceFeedback.color = Color.white;
             AnswerChoiceFeedback.text = "Incorrect--try again!";
             GameObject.Find("BondBrokenSound").GetComponent<AudioSource>().Play();
